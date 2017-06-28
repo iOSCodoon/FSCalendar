@@ -226,12 +226,14 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     if (!FSCalendarInAppExtension) {
         
         UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+        view.hidden = YES;
         view.backgroundColor = FSCalendarStandardLineColor;
         view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin; // Stick to top
         [self addSubview:view];
         self.topBorder = view;
         
         view = [[UIView alloc] initWithFrame:CGRectZero];
+        view.hidden = YES;
         view.backgroundColor = FSCalendarStandardLineColor;
         view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin; // Stick to bottom
         [self addSubview:view];
