@@ -348,6 +348,8 @@ IB_DESIGNABLE
 @property (assign, nonatomic) FSCalendarPlaceholderType placeholderType;
 #endif
 
+@property (weak  , nonatomic) FSCalendarCollectionView   *collectionView;
+
 /**
  The index of the first weekday of the calendar. Give a '2' to make Monday in the first column.
  */
