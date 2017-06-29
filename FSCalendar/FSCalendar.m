@@ -697,8 +697,12 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
             obj.enabled = YES;
         }
     }];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(calendarViewDidEndDecelerating:)]) {
-        [self.delegate calendarViewDidEndDecelerating:scrollView];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(calendarViewDidEndScrollingAnimation:)]) {
+        [self.delegate calendarViewDidEndScrollingAnimation:scrollView];
     }
 }
 

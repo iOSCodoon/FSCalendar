@@ -153,7 +153,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)calendarCurrentPageDidChange:(FSCalendar *)calendar;
 
-- (void)calendarViewDidEndDecelerating:(UIScrollView *)scrollView;
+- (void)calendarViewDidEndScrollingAnimation:(UIScrollView *)scrollView;
 
 /**
  These functions are deprecated
