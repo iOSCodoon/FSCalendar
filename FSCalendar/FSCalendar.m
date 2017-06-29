@@ -697,6 +697,9 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
             obj.enabled = YES;
         }
     }];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(calendarViewDidEndDecelerating:)]) {
+        [self.delegate calendarViewDidEndDecelerating:scrollView];
+    }
 }
 
 #pragma mark - <UIGestureRecognizerDelegate>
