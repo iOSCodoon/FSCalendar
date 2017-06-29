@@ -1228,8 +1228,8 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     if (!_minimumDate || !_maximumDate) {
         return;
     }
-    animated &= _scrollEnabled; // No animation if _scrollEnabled == NO;
-    
+//    animated &= _scrollEnabled; // No animation if _scrollEnabled == NO;
+
     date = [self.calculator safeDateForDate:date];
     NSInteger scrollOffset = [self.calculator indexPathForDate:date atMonthPosition:FSCalendarMonthPositionCurrent].section;
     
