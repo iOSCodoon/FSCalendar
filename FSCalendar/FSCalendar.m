@@ -876,6 +876,13 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     }
 }
 
+- (void)setCalendarHeaderViewCustomEnabled:(BOOL)calendarHeaderViewCustomEnabled
+{
+    _calendarHeaderViewCustomEnabled = calendarHeaderViewCustomEnabled;
+
+    _calendarHeaderView.calendarHeaderViewCustomEnabled = calendarHeaderViewCustomEnabled;
+}
+
 - (void)setLocale:(NSLocale *)locale
 {
     if (![_locale isEqual:locale]) {
@@ -1373,6 +1380,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         if (!_calendarHeaderView) {
             
             FSCalendarHeaderView *headerView = [[FSCalendarHeaderView alloc] initWithFrame:CGRectZero];
+            headerView.calendarHeaderViewCustomEnabled = _calendarHeaderViewCustomEnabled;
             headerView.calendar = self;
             headerView.scrollEnabled = _scrollEnabled;
             [_contentView addSubview:headerView];

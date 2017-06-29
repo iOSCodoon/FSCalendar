@@ -193,6 +193,8 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
  */
 @property (assign, nonatomic) CGFloat borderRadius;
 
+@property (readwrite, nonatomic, assign) CGFloat circleDiameter;
+
 /**
  * The case options manage the case of month label and weekday symbols.
  *

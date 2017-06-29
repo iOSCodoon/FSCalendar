@@ -64,6 +64,16 @@
     self.collectionView = collectionView;
 }
 
+- (void)setCalendarHeaderViewCustomEnabled:(BOOL)calendarHeaderViewCustomEnabled
+{
+    _calendarHeaderViewCustomEnabled = calendarHeaderViewCustomEnabled;
+
+    if (calendarHeaderViewCustomEnabled) {
+        [_collectionView removeFromSuperview];
+        _collectionView = nil;
+    }
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];

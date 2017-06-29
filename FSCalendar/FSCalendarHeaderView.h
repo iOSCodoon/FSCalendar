@@ -13,6 +13,8 @@
 
 @interface FSCalendarHeaderView : UIView
 
+@property (readwrite, nonatomic, assign) BOOL calendarHeaderViewCustomEnabled;
+
 @property (weak, nonatomic) FSCalendarCollectionView *collectionView;
 @property (weak, nonatomic) FSCalendarHeaderLayout *collectionViewLayout;
 @property (weak, nonatomic) FSCalendar *calendar;
