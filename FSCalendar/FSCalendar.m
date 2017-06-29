@@ -992,15 +992,16 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 - (CGFloat)preferredRowHeight
 {
     if (_preferredRowHeight == FSCalendarAutomaticDimension) {
-        CGFloat headerHeight = self.preferredHeaderHeight;
-        CGFloat weekdayHeight = self.preferredWeekdayHeight;
-        CGFloat contentHeight = self.transitionCoordinator.cachedMonthSize.height-headerHeight-weekdayHeight-_scopeHandle.fs_height;
-        CGFloat padding = 5;
-        if (!self.floatingMode) {
-            _preferredRowHeight = (contentHeight-padding*2)/6.0;
-        } else {
-            _preferredRowHeight = _rowHeight;
-        }
+//        CGFloat headerHeight = self.preferredHeaderHeight;
+//        CGFloat weekdayHeight = self.preferredWeekdayHeight;
+//        CGFloat contentHeight = self.transitionCoordinator.cachedMonthSize.height-headerHeight-weekdayHeight-_scopeHandle.fs_height;
+//        CGFloat padding = 5;
+//        if (!self.floatingMode) {
+//            _preferredRowHeight = (contentHeight-padding*2)/6.0;
+//        } else {
+//            _preferredRowHeight = _rowHeight;
+//        }
+        _preferredRowHeight = _rowHeight;
     }
     return _preferredRowHeight;
 }
